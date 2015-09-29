@@ -8,5 +8,8 @@ describe 'freeradius' do
     :enable => true,
   }) }
 
-  it { is_expected.to contain_package('freeradius').with_ensure(:present) }
+  it { is_expected.to contain_package('freeradius')
+    .with_ensure(:present)
+    .that_comes_before('Service[radiusd]')
+  }
 end
