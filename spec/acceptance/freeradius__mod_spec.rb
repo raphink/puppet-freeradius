@@ -14,7 +14,8 @@ describe 'freeradius::mod' do
       }
       file { '/etc/raddb/mods-config/perl/auth.pl':
         ensure  => file,
-        require => Class['freeradius::install'],
+        require => Package['freeradius-perl'],
+        notify  => Class['freeradius::service'],
       }
     EOF
 
