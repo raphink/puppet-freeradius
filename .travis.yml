@@ -21,3 +21,12 @@ matrix:
     script: sudo service docker restart ; sleep 10 && bundle exec rspec spec/acceptance/*_spec.rb
 notifications:
   email: false
+deploy:
+  provider: puppetforge
+  user: raphink
+  password:
+    secure: "I6PPEfEifOi/UTSLn2ddqtKPNZQ1MfKhtb6Y0C7F+k0ks161nzXNnub0jY4Yezj5w6n4znqjHYFN7YTvZg9kOIOhR5yvUJubMW8oUJxBgUXJRO4/+NrbEL7qS8a1PmP9AiXtmXwwGVw3GsbiiFsN0wgxHlsrYiF6p/D6AcU53mS4DWrW6U6VrojgNk9ktIgYUYj+RDfk8b6hcmp1PklaCAE/NVKM8kJcPdussAzSkL1sHAdI7eDmygTf4BGgnJoqML4FllYCW02SMzFHU6WXotN0rbrCVfTY3DrfPLy3DEJHkKnlBqjdG6UxtNOrqm2WvB9XOewDG5GQdpKsEfrMvB3TmKhimmD3ID5ZPXf3Q0rL1BlnfcZNINa/LZQQHvNE4X8Kmh5ReRb/Xai+7z/OuhsFHxwi5NSQBKU5nIGDNJCGftkvOOs90+X388fjSrRiFAa9AU9fkdmm4lYPy6+GVcu48F/n4pq99mCqqWns0rTIOvBC8K3aFFm4UiQfF6ROrb8DoABSkGJBRSdmhQxPt8Mbsixq1pY/HVpm8IG0Rz1X3KPWHxkV1B3eSu6943fx6J57aGFrn86igNxm4XpXnn1Deeplwt9wuZCdTuNyOpDa0a8485b358l9gmjnbkaGnViWHM3PGHtDTYi6TbLnZP0S3V/PhdEax9g92e9zDJs="
+  on:
+    tags: true
+    all_branches: true
+    rvm: 2.1.6
