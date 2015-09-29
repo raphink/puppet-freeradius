@@ -1,4 +1,4 @@
 class freeradius {
+  class { 'freeradius::install': } ->
   class { 'freeradius::service': }
-  class { 'freeradius::install': }
 }
