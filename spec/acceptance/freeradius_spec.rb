@@ -12,6 +12,10 @@ describe 'freeradius' do
       apply_manifest(pp, :catch_changes => true)
     end
 
+    describe command('radiusd -C') do
+      its(:exit_status) { is_expected.to eq 0 }
+    end
+
     describe service('radiusd') do
       it { is_expected.to be_running }
       it { is_expected.to be_enabled }
