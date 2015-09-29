@@ -1,7 +1,7 @@
 {
   "name": "raphink-freeradius",
   "version": "0.1.0",
-  "author": "Camptocamp",
+  "author": "Raphaël Pinson",
   "summary": "Puppet FreeRADIUS module",
   "license": "Apache-2.0",
   "source": "https://github.com/raphink/puppet-freeradius",
