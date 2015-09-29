@@ -11,5 +11,14 @@ describe 'freeradius' do
     it 'should converge on the first run' do
       apply_manifest(pp, :catch_changes => true)
     end
+
+    describe service('radiusd') do
+      it { is_expected.to be_running }
+      it { is_expected.to be_enabled }
+    end
+
+    describe port('1812') do
+      it { is_expected.to be_listening.on('udp') }
+    end
   end
 end
