@@ -18,7 +18,7 @@ describe 'freeradius' do
     end
 
     describe port('1812') do
-      it { is_expected.to be_listening.on('udp') }
+      it { is_expected.to be_listening.on('0.0.0.0').with('udp') }
     end
   end
 end
