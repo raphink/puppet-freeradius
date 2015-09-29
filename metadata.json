@@ -1,0 +1,24 @@
+{
+  "name": "raphink-freeradius",
+  "version": "0.1.0",
+  "author": "Camptocamp",
+  "summary": "Puppet FreeRADIUS module",
+  "license": "Apache-2.0",
+  "source": "https://github.com/raphink/puppet-freeradius",
+  "project_page": "https://github.com/raphink/puppet-freeradius",
+  "issues_url": "https://github.com/raphink/puppet-freeradius/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">=3.2.0 <5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    }
+  ]
+}
