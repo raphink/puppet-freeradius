@@ -7,4 +7,6 @@ describe 'freeradius' do
     :ensure => 'running',
     :enable => true,
   }) }
+
+  it { is_expected.to contain_package('freeradius').with_ensure(:present) }
 end
