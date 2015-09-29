@@ -1,6 +1,6 @@
 require 'beaker-rspec'
 
-install_puppet_agent_on hosts
+install_puppet_agent_on hosts, {}
 
 RSpec.configure do |c|
   module_root = File.expand_path(File.join(File.dirname(__FILE__), '..'))
