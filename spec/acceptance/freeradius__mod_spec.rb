@@ -2,22 +2,7 @@ require 'spec_helper_acceptance'
 
 describe 'freeradius::mod' do
   context 'when running puppet code' do
-    pp = <<-EOF
-      class { 'freeradius': }
-      freeradius::mod { 'perl':
-        ensure  => present,
-        package => 'freeradius-perl',
-        content => 'perl {
-          filename = ${modconfdir}/${.:instance}/auth.pl
-        }
-        ',
-      }
-      file { '/etc/raddb/mods-config/perl/auth.pl':
-        ensure  => file,
-        require => Package['freeradius-perl'],
-        notify  => Class['freeradius::service'],
-      }
-    EOF
+    pp = puppet_example('mod_perl')
 
     it 'should apply with no errors' do
       apply_manifest(pp, :catch_failures => true)
