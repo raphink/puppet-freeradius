@@ -29,7 +29,6 @@ describe 'freeradius::mod' do
     }
 
     it 'should require package and notify service' do
-      pending "rspec-puppet doesn't seem to catch these dependencies"
       is_expected.to contain_file('/etc/raddb/mods-enabled/perl')
       .that_requires('Package[freeradius]')
       .that_notifies('Service[radiusd]')
@@ -57,7 +56,6 @@ describe 'freeradius::mod' do
     it { is_expected.to contain_package('bar').with_ensure(:present) }
 
     it 'should come before module file' do
-      pending "There seems to be a bug with spec-puppet here"
       is_expected.to contain_package('bar').that_comes_before('File[/etc/raddb/mods-enabled/perl]')
     end
   end
