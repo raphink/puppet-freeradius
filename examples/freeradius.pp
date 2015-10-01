@@ -1,4 +1,4 @@
-# ## Simple usage
+# ### Simple usage
 # ```puppet
 include freeradius
 # ```

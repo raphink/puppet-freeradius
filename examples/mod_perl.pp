@@ -1,4 +1,4 @@
-# ## Manage a module
+# ### Manage a module
 # ```puppet
 class { 'freeradius': }
 

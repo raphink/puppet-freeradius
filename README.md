@@ -8,13 +8,13 @@ FreeRADIUS Puppet module
 ## Usage
 
 
-## Simple usage
+### Simple usage
 ```puppet
 include freeradius
 ```
 
 
-## Manage a module
+### Manage a module
 ```puppet
 class { 'freeradius': }
 
