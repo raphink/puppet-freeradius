@@ -6,7 +6,10 @@ group :development, :unit_tests do
                                 :github  => 'rodjek/rspec-puppet',
                                 :require => false
   
-  gem 'rspec-puppet-facts',     :require => false
+  gem 'rspec-puppet-facts',     :require   => false
+  gem 'github_readme_generator',
+                                :github  => 'raphink/github-readme-generator',
+                                :require => false
 end
 
 group :system_tests do

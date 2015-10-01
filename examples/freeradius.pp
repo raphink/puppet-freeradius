@@ -1,2 +1,4 @@
-# Install freeradius and start service
+# ## Simple usage
+# ```puppet
 include freeradius
+# ```

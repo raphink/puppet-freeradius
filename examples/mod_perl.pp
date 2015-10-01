@@ -1,6 +1,5 @@
-# Install freeradius with mod perl
-# and a perl script
-# and start service
+# ## Manage a module
+# ```puppet
 class { 'freeradius': }
 
 freeradius::mod { 'perl':
@@ -16,3 +15,4 @@ file { '/etc/raddb/mods-config/perl/auth.pl':
   require => Package['freeradius-perl'],
   notify  => Class['freeradius::service'],
 }
+# ```
