@@ -33,3 +33,6 @@ file { '/etc/raddb/mods-config/perl/auth.pl':
 }
 ```
 
+Please see the Examples directory for further details
+
+
