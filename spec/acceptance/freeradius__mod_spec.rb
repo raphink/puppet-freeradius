@@ -6,6 +6,7 @@ describe 'freeradius::mod' do
       class { 'freeradius': }
       freeradius::mod { 'perl':
         ensure  => present,
+        package => 'freeradius-perl',
         content => 'perl {
           filename = ${modconfdir}/${.:instance}/auth.pl
         }
